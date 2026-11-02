@@ -76,6 +76,104 @@ h1 {
   cursor: pointer;
 }
 
+.add-form select,
+.item-category {
+  min-width: 0;
+  font: inherit;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.add-form select {
+  max-width: 140px;
+  padding: 10px 8px;
+}
+
+.item-category {
+  flex-shrink: 0;
+  max-width: 120px;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.categories {
+  margin-top: 16px;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-button {
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-button[aria-pressed="true"] {
+  color: var(--accent-text);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.category-chip {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.category-chip .delete-button {
+  padding: 2px 4px;
+  font-size: 1rem;
+}
+
+.category-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.category-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.category-form button {
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: inherit;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.empty {
+  margin: 16px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
 .todo-list {
   margin: 16px 0;
   padding: 0;
@@ -135,4 +233,27 @@ h1 {
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .add-form {
+    flex-wrap: wrap;
+  }
+
+  .add-form input {
+    flex-basis: 100%;
+  }
+
+  .add-form select {
+    flex: 1;
+    max-width: none;
+  }
+
+  .todo-item {
+    flex-wrap: wrap;
+  }
+
+  .todo-item label {
+    flex-basis: 60%;
+  }
 }

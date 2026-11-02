@@ -13,10 +13,22 @@
     <form id="todo-form" class="add-form">
       <label for="todo-input" class="visually-hidden">New task</label>
       <input id="todo-input" type="text" placeholder="What needs doing?" autocomplete="off" required>
+      <label for="todo-category" class="visually-hidden">Category for new task</label>
+      <select id="todo-category"></select>
       <button type="submit">Add</button>
     </form>
 
+    <section class="categories" aria-label="Categories">
+      <div id="category-filters" class="category-filters"></div>
+      <form id="category-form" class="category-form">
+        <label for="category-input" class="visually-hidden">New category name</label>
+        <input id="category-input" type="text" placeholder="New category" maxlength="30" autocomplete="off" required>
+        <button type="submit">Add category</button>
+      </form>
+    </section>
+
     <ul id="todo-list" class="todo-list"></ul>
+    <p id="todo-empty" class="empty">No tasks here yet.</p>
 
     <footer class="summary">
       <span id="todo-count"></span>
